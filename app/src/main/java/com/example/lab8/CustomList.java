@@ -9,8 +9,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+import java.util.Collections;
+import java.util.List;
 import java.util.ArrayList;
+
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -50,11 +52,12 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void addCity(City city){
+        cities.add(city);
 
     }
 
     public boolean hasCity(City city){
-        for(City c : this.cities) {
+        for(City c : cities) {
             if(c.equals(city)){
                 return true;
             }
