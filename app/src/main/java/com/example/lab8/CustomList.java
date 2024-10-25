@@ -67,16 +67,18 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void delete(City city){
-        //int i = 0;
+        int i = 0;
 
-        //for(City c : cities) {
-          //  if(c.equals(c)){
-            //    cities.remove(i);
-              //  return;
-           // }
-           // ++i;
-        //}
-        //throw new IllegalArgumentException();
+        for(City c : cities) {
+            if(c.equals(c)){
+                cities.remove(i);
+                return;
+            }
+            ++i;
+        }
+        throw new IllegalArgumentException();
+
+
 
 
     }
